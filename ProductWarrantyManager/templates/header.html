@@ -1,0 +1,22 @@
+<header>
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="#" onclick="loadHome(event)">Home</a></li>
+            <li class="dropdown-menu"><span>Warranties <i class="fas fa-caret-down" SameSite=None></i></span>
+                <ul class="menu">
+                    <li><a id="list-items-anchor" onclick="loadWarranties(event)">List items</a></li>
+                    <li><a onclick="loadForm(event)">Add item</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact" onclick="setActiveTab(event)">Contact</a></li>
+        </ul>
+
+    </nav>
+    <div class="banner">
+        <div>
+            <p>Product warranty management solution for employees</p>
+            <a href="#learn-more" onclick="loadHome(event)">Learn more <i class="fas fa-angle-right" SameSite=None></i></a>
+        </div>
+        <img src="images/warranty.png" alt="Warranty badge">
+    </div>
+</header>

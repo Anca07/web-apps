@@ -1,0 +1,1 @@
+A solution for managing product warranties build with HTML, CSS & JavaScript
