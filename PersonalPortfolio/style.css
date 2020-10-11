@@ -1,0 +1,355 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'Lora', serif;
+    background-color: #eee;
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 20px;
+    z-index: 1;
+    border-bottom: 1px solid white;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 20px 30px;
+    transition: font-weight 0.5s, background-color 0.5s, color 0.5s, border-radius 0.5s;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+.nav-link:hover {
+    font-weight: 800;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 5px;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: linear-gradient(
+      115deg,
+      rgba(0, 0, 0, 0.93),
+      rgba(0, 0, 0, 0.93)
+    ),
+    url("https://image.freepik.com/free-photo/desktop-source-code-wallpaper-by-computer-language-with-coding-programming_33771-595.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 200px 100px 200px;
+    border-radius: 5px;
+}
+
+.welcome img {
+    border-radius: 50%;
+}
+
+footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    color: white;
+    font-size: 1.1em;
+}
+
+.contact-links-section {
+    display: flex;
+    justify-content: center; 
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    padding: 20px 0px;
+}
+
+footer a:hover {
+    font-weight: 800;
+}
+
+.contact-link {
+    margin: 20px 50px;
+}
+
+.contact-text {
+    font-family: 'Sriracha', cursive;
+    font-size: 1.4em;
+    padding: 15px;
+}
+
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    grid-column-gap: 30px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.project-tile {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22, 22, 22);
+    box-shadow: 10px 10px 20px rgb(66, 66, 66);
+    margin: 60px 50px;
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.project-tile img {
+    border-radius: 5px;
+    max-width: 95%;
+}
+
+.project-tile:hover {
+    transform: translateY(-0.2em) scale(1.02);
+    background-color: rgb(10, 10, 10);
+}
+
+.project-tile i {
+    margin-left: 5px;
+    visibility: hidden;
+}
+
+.project-tile:hover i {
+    visibility: visible;
+}
+
+.project-tile:hover p {
+  text-decoration: underline;
+}
+
+.language-labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.label {
+    margin: 0px 10px;
+    padding: 0px 10px;
+    border-radius: 3px;
+    font-size: 0.8em;
+}
+
+.label-html {
+    background-color: rgb(255, 61, 55);
+    box-shadow: inset 0 -1px 0 rgba(27,31,35,.12);
+    color: white;
+}
+
+.label-css {
+    background-color: rgb(68, 68, 255);
+}
+
+.label-js {
+    background-color: rgb(214, 195, 19);
+}
+
+.label-react {
+    background-color: rgb(93, 182, 255);
+}
+
+@media(max-width:900px){
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome {
+        padding: 150px 50px 50px 100px;
+      }
+}
+
+.var-highlight{
+    color: rgb(25, 101, 201);
+}
+.string-highlight{
+    color: rgba(253, 149, 90, 0.8);
+}
+
+.sign-highlight {
+    color: whitesmoke;
+}
+
+.brackets-highlight {
+    color: #C0AD60;
+}
+
+.typewriter{
+    font-size: 1.5em;
+    font-family: "Courier New";   
+    color: rgb(143, 183, 236); 
+}
+
+.typewriter:after{
+    content: "|";
+    animation: blink 500ms linear infinite alternate;
+}
+
+pre {
+    white-space: pre-wrap;       
+    white-space: -moz-pre-wrap;  
+    white-space: -pre-wrap;      
+    white-space: -o-pre-wrap;    
+    word-wrap: break-word;
+}
+
+@-webkit-keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes blink{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 30px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1.5px rgb(121, 121, 121);
+    border-radius: 5px;
+    background-color: rgb(248, 248, 248);
+    padding: 20px 55px;
+    margin: 30px;
+    position: relative;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    width: 25%;
+}
+
+.skill p {
+    text-align: justify;
+    font-style: italic;
+}
+
+.skill ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.skill i {
+    margin: 5px 10px;
+    font-size: 1.1em;
+}
+
+legend {
+    font-size: 1.7em;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.skills-header{
+   position: absolute;
+   top: -30px;
+   background-color: #eee;
+   padding: 0px 10px;
+   border-radius: 10px;
+   
+}
+
+.skills-header h2 {
+    margin: 10px;
+}
+
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.skills-section h2{
+    text-align: center;
+    width: 50%;
+}
+
+.projects-section h2{
+    text-align: center;
+    width: 50%;
+}
+
+hr {
+    color: black;
+    width: 70%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
