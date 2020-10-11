@@ -1,0 +1,48 @@
+.quote-box{
+    width: 50%;
+    border-radius: 5px;
+    color: whitesmoke;
+    padding: 30px 50px;
+    box-shadow: 10px 20px 30px rgb(49, 49, 49);
+}
+
+.quote-box h1{
+    text-align: center;
+}
+
+.quote-box p{
+    text-align: end;
+}
+
+.links-section {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.links-section .button {
+    padding: 10px 20px;
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 3px;
+    transition: color 0.3s, transform 0.3s;
+    background-color: whitesmoke;
+}
+
+.links-section .button:hover{
+    cursor: pointer;
+    transform: translateY(-0.1em) scale(1.03);
+}
+
+.links-section i {
+    font-size: 1.5em;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.links-section i:hover {
+    font-size: 1.5em;
+    color: white;
+    transform: translateY(-0.1em) scale(1.03);
+}
