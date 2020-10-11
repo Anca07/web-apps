@@ -1,0 +1,13 @@
+/* articles */
+
+.active-icon {
+    font-size: 1.5rem;
+  }
+  
+.active-true-icon {
+    color: green;
+  }
+  
+  .active-false-icon {
+    color: crimson;
+  }

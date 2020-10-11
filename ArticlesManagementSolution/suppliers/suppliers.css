@@ -1,0 +1,71 @@
+/* suppliers */
+
+.suppliers-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .supplier-article {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid rgb(82, 81, 81);
+    border-radius: 5px;
+    box-shadow: 5px 4px 14px rgb(114, 113, 113);
+    margin: 20px 30px;
+    flex: 0 0 25%;
+    background-color: white;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    transition: transform 0.3s;
+  }
+  
+  
+  .supplier-article:hover {
+    transform: translateY(-0.1em) scale(1.03);
+  }
+  
+  .supplier-article-header {
+    background-color: #033968;
+    color: white;
+    width: 100%;
+  }
+  
+  .supplier-article-content {
+    padding: 5px 10px;
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 90%;
+  }
+  
+  .supplier-article-content p:first-child {
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+  }
+  
+  .order-icon {
+    font-size: 2.5rem;
+  }
+  
+  .supplier-article-orders-count {
+    position: relative;
+  }
+  
+  .supplier-article-orders-count p {
+    position: absolute;
+    top: 8%;
+    left: 60%;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 900px) {
+    .supplier-article {
+      flex: 0 0 70%;
+    }
+  }

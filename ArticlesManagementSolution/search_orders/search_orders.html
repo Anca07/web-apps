@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./search_orders.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <title>Search orders</title>
+</head>
+
+<body>
+    <template id="header"></template>
+
+    <main>
+        <div class="search-supplier-container">
+            <input type="text" id="search-supplier-input" class="search-supplier-input">
+            <div id="search-supplier-button" class="button">Search</div>
+        </div>
+
+        <div class="table-container">
+            <table id="orders-table">
+                <thead>
+                    <tr>
+                        <th>Article Id</th>
+                        <th>Article Description</th>
+                        <th>Last Order Date</th>
+                        <th>Supplier Name</th>
+                        <th>Article ClassName</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+    </main>
+    <script src="../header/header.js"></script>
+    <script src="../data/data.js"></script>
+    <script src="../utils/utils.js"></script>
+    <script src="../search_orders/search_orders.js"></script>
+</body>
+
+</html>

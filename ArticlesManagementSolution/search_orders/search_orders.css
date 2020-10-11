@@ -1,0 +1,36 @@
+/* search orders */
+
+.search-supplier-container {
+  display: flex;
+  margin: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.button {
+  background-color: #033968;
+  border: 1px solid #033968;
+  color: white;
+  margin: 5px 30px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  color: #033968;
+  background-color: white;
+}
+
+.search-supplier-input {
+  font-size: 1.3rem;
+  width: 35%;
+  padding: 0px 10px;
+  margin: 5px;
+}
+
+@media (max-width: 600px) {
+  .search-supplier-input {
+    width: 100%;
+  }
+}
