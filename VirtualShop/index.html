@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <title>Magazin Virtual</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#">
+                <h1>Virtual Shop</h1>
+            </a>
+            <div class="right-nav-container">
+                <input type="search" class="filter" name="filter" id="filter-products" onkeyup="filterProducts()" placeholder="Search for products ...">
+                <div class="cart-container"><i class="fas fa-shopping-cart cart-logo"></i>
+                    <div class="cart-section">
+                        <table>
+                            <tr>
+                                <th>Nume</th>
+                                <th>Cantitate</th>
+                                <th>Pret</th>
+                                <th>Actiune</th>
+                            </tr>
+
+                        </table>
+                        <div class="button-section">
+                            <div class="button" id="button-delete">Goleste cosul</div>
+                            <div class="button" id="button-send">Trimite comanda</div>
+                        </div>
+
+                    </div>
+                    <div class="counter" id="counter">0</div>
+                </div>
+
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="modal">
+            <p>Comanda a fost trimisa cu succes!</p>
+            <div id="modal-button" class="button">Ok</div>
+        </div>
+        <div class="modal-background"></div>
+        <section class="products-section">
+
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            Copyright 2020 - JS Fundamentals
+        </div>
+    </footer>
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
