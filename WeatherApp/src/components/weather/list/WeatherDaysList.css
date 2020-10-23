@@ -1,0 +1,11 @@
+.WeatherDaysList {
+    display: flex;
+    flex-direction: column;
+}
+
+.WeatherRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+}
