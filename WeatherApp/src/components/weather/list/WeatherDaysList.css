@@ -1,6 +1,8 @@
 .WeatherDaysList {
     display: flex;
     flex-direction: column;
+    margin: 2% 20%;
+    font-size: 1.3rem;
 }
 
 .WeatherRow {
@@ -8,4 +10,22 @@
     flex-direction: row;
     justify-content: space-around;
     padding: 15px;
+    margin: 10px 3px;
+    border: 1px solid #bdb7b7;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px #bdb7b7;
+    background-color: #fdfdfd;
+    transition: all .2s ease-in-out;
+}
+
+.WeatherCell {
+    text-align: center;
+    padding: 3% 1%;
+    min-width: 100px;
+}
+
+.WeatherRow:hover {
+    transform: scale(1.01);
+    font-weight: bold;
+    cursor: pointer;
 }

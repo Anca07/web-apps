@@ -6,6 +6,7 @@ import WeatherDaysList from '../components/weather/list/WeatherDaysList'
 import './WeatherDashboard.css'
 
 const MESSAGE = "Love is in the air. Call that special someone up for a coffee"
+const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
 class WeatherDashboard extends React.Component {
     state = {
@@ -45,11 +46,11 @@ class WeatherDashboard extends React.Component {
 
         const weatherArray = [];
         for (let key in weatherPerDay) {
-            weatherArray.push(weatherPerDay[key][1])
+            const noon = Math.floor(weatherPerDay[key].length / 2);
+            weatherArray.push(weatherPerDay[key][noon])
         }
 
         const weathers = weatherArray.map(weather => {
-            console.log(weather)
             const date = moment(moment.unix(weather.dt).format("YYYY-MM-DD HH:mm:ss"));
             return {
                 day: date.format('dddd'),
@@ -64,10 +65,10 @@ class WeatherDashboard extends React.Component {
 
     onFetchWeatherData = city => {
         if (city && city.length >= 3) {
-            fetch(`https://api.openweathermap.org/data/2.5/forecast?appid=my-app-id&units=metric&q=${city}`)
+            fetch(`https://api.openweathermap.org/data/2.5/forecast?appid=${WEATHER_API_KEY}&units=metric&q=${city}`)
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data);
+                    console.log(data)
                     this.setState({
                         city: {
                             name: data.city.name,
@@ -85,6 +86,12 @@ class WeatherDashboard extends React.Component {
                     })
                     console.log(err)
                 })
+        } else {
+            this.setState({
+                city: null,
+                currentDayWeather: null,
+                weatherList: []
+            })
         }
     }
 

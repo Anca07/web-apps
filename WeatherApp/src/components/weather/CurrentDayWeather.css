@@ -1,20 +1,33 @@
 .CurrentDayWeather {
     justify-content: space-around;
     padding: 30px;
+    font-size: 1.5rem;
+    border: 1px solid #bdb7b7;
+    border-radius: 5px;
+    margin: 2% 30%;
+    box-shadow: 3px 3px 6px #bdb7b7;
+    background-color: #fdfdfd;
+    transition: all .2s ease-in-out;
 }
 
 .Temperature {
-    font-size: 3rem;
-    padding: 10px;
+    font-size: 4rem;
+    padding: 20px;
     font-weight: bold;
 }
 
 .CurrentDayWeatherRow {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.Logo {
-    width: 40px;
-    height: 40px;
+.CurrentDayWeatherColumn {
+    padding: 0px 10px;
+}
+
+.CurrentDayWeather:hover {
+    transform: scale(1.01);
+    cursor: pointer;
 }
